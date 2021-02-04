@@ -1,16 +1,14 @@
 import React from "react";
 
 const Playlist = (props) => {
-  const { playlist } = props;
+  const { playlist, deleteSong } = props;
   const loaded = () => {
     return (
       <div key={Playlist._id}>
         {playlist.map((song) => {
           return (
             <article>
-              <div className="playlist-name">
-                <h2> Playlist 1</h2>
-              </div>
+              
 
               <div className="song-name">
                 <p>{song.title}</p>
@@ -23,6 +21,7 @@ const Playlist = (props) => {
               <div className="song-length">
                 <p> {song.time}</p>
               </div>
+              <button onClick={()=>{deleteSong(song)}}>X</button>
             </article>
           );
         })}
