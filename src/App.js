@@ -10,8 +10,7 @@ import FavSong from "./components/FavoriteSongs";
 import NewSongs from "./components/NewSongs";
 
 function App() {
-<<<<<<< HEAD
-=======
+
   // define backend url base------------------------------------
   const url = "https://mern1207-group.herokuapp.com"
   // Defines STATES------------------------------------
@@ -37,8 +36,7 @@ function App() {
     })
     .then(() => getSongs());
   };
->>>>>>> ac99ef8524b216a8b31156a77ef11ee093560c11
-  
+
   return (
     <div className="App">
       <Titlebar />
