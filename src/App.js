@@ -15,7 +15,7 @@ function App() {
   const url = "https://mern1207-group.herokuapp.com"
   // Defines STATES------------------------------------
   const [playlist, setPlaylist] = useState([])
-
+  const [selectedSong, setSelectedSong] = useState("")
   // CRUD ROUTES------------------------------------
   // GET - INDEX---
   const getSongs = () => {
@@ -36,13 +36,24 @@ function App() {
     })
     .then(() => getSongs());
   };
+  // DESTROY ---
+  
+  const deleteSong = (song)=>{
+    console.log("this is song",song)
+      axios.delete(url + '/songs/' + song._id)
+      .then((res)=>{getSongs()})
+    }
 
   return (
     <div className="App">
       <Titlebar />
+      <div className="playlist-name">
+        <h2> Playlist 1</h2>
+      </div>
       <Playlist 
         playlist={playlist} //Pass Down playlist state into playlist comp
-        
+        deleteSong = {deleteSong}
+
       />
       <FavSong />
       <NewSongs playlist={playlist} create={handleCreateSong} />
