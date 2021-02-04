@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Titlebar from "./components/TopBar";
+import Playlist from "./components/Playlist";
+import FavSong from "./components/FavoriteSongs";
+import NewSongs from "./components/NewSongs";
 function App() {
   return (
     <div className="App">
-     <h1>Hello World</h1>
-     <h2> why won't you work.... :(</h2>
+      <Titlebar />
+      <Playlist />
+      <FavSong />
+      <NewSongs />
     </div>
   );
 }
