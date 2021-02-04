@@ -8,7 +8,9 @@ import Titlebar from "./components/TopBar";
 import Playlist from "./components/Playlist";
 import FavSong from "./components/FavoriteSongs";
 import NewSongs from "./components/NewSongs";
+
 function App() {
+
   // define backend url base------------------------------------
   const url = "https://mern1207-group.herokuapp.com"
   // Defines STATES------------------------------------
