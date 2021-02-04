@@ -42,9 +42,10 @@ function App() {
       <Titlebar />
       <Playlist 
         playlist={playlist} //Pass Down playlist state into playlist comp
+        
       />
       <FavSong />
-      <NewSongs />
+      <NewSongs playlist={playlist} create={handleCreateSong} />
     </div>
   );
 }

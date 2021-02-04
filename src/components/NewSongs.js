@@ -9,12 +9,13 @@ const NewSongs = (props) => {
   }
 
   // --- Change to props.songs later when App is updated. ----
-  const [formData, setFormData] = React.useState(sample)
+  const [formData, setFormData] = React.useState(props.playlist)
+  console.log("form playlist: ", formData)
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("you submitted: ", formData)
-    //props.handleSubmit(formData); // Submit to Parents desired function
+    props.create(formData); // Submit to Parents desired function
   };
 
 
@@ -57,7 +58,7 @@ const NewSongs = (props) => {
             onChange={handleChange}
           />
         </div>
-        <button onClick={ handleSubmit} >Add</button>
+        <button onClick={ handleSubmit } >Add</button>
       </form>
     </div>
   );
