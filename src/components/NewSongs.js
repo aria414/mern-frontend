@@ -2,22 +2,21 @@ import React from "react";
 import "../App.css";
 
 const NewSongs = (props) => {
-  const sample ={
+  const sample = {
     title: "songName",
     artist: "singer",
-    time: "5:00"
-  }
+    time: "5:00",
+  };
 
   // --- Change to props.songs later when App is updated. ----
-  const [formData, setFormData] = React.useState(props.playlist)
-  console.log("form playlist: ", formData)
+  const [formData, setFormData] = React.useState(sample);
+  console.log("form playlist: ", formData);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("you submitted: ", formData)
+    console.log("you submitted: ", formData);
     props.create(formData); // Submit to Parents desired function
   };
-
 
   // -- Everytime you tye, you see consolelog changes. When finished typing, the setFormData will update state to current form state. So when you submit, it will pass the info back to App to handle. ---
   const handleChange = (event) => {
@@ -28,7 +27,7 @@ const NewSongs = (props) => {
     <div>
       <h2> New Songs Component </h2>
 
-      <form >
+      <form>
         <div>
           <label>Song Title</label>
           <input
@@ -58,7 +57,7 @@ const NewSongs = (props) => {
             onChange={handleChange}
           />
         </div>
-        <button onClick={ handleSubmit } >Add</button>
+        <button onClick={handleSubmit}>Add</button>
       </form>
     </div>
   );
