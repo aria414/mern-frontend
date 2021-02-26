@@ -76,13 +76,6 @@ function App() {
     //   .then(() => getSongs());
     console.log("You are Updating: ", currentSong);
   };
-  // DESTROY ---
-  
-  const deleteSong = (song)=>{
-    console.log("this is song",song)
-      axios.delete(url + '/songs/' + song._id)
-      .then((res)=>{getSongs()})
-    }
 
   return (
     <div className="App">
