@@ -2,7 +2,6 @@ import React from "react";
 
 const Playlist = (props) => {
   const { playlist } = props;
-
   //console.log("PLAYLIST props: ", playlist);
 
   const handleAdd = (songSelected) => {

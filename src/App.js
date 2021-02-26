@@ -32,6 +32,7 @@ function App() {
     console.log("You are deleting: ", currentSong);
   };
 
+
   // CRUD ROUTES------------------------------------
   // GET - INDEX---
   const getSongs = () => {
@@ -75,10 +76,18 @@ function App() {
     //   .then(() => getSongs());
     console.log("You are Updating: ", currentSong);
   };
+  // DESTROY ---
+  
+  const deleteSong = (song)=>{
+    console.log("this is song",song)
+      axios.delete(url + '/songs/' + song._id)
+      .then((res)=>{getSongs()})
+    }
 
   return (
     <div className="App">
       <Titlebar />
+    
       <Playlist
         playlist={playlist} //Pass Down playlist state into playlist comp
         handleSubmit={addSong}
