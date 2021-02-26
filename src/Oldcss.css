@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 .App {
   text-align: center;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Amatic SC", cursive;
   font-size: 18px;
 }
 * {
-  background-color: rgb(237, 242, 243);
+  background-color: grey;
 }
 .tunrlogo {
-  color: rgb(36, 36, 36);
+  color: white;
   text-align: left;
   padding-left: 20px;
 }
@@ -20,8 +19,7 @@
 }
 .playlist-name {
   text-align: left;
-  width: 600px;
-  margin: 0 auto;
+  padding-left: 20px;
 }
 .flex-container {
   display: flex;
@@ -32,18 +30,6 @@
 .fav-song {
   text-align: left;
   padding-left: 20px;
-}
-.fav-song-container {
-  border-bottom: 3px solid;
-}
-
-.all-songs {
-  padding: 3%;
-}
-
-.song-details {
-  border: 1px solid;
-
 }
 .fav-song-container {
   border-bottom: 3px solid;

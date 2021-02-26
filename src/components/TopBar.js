@@ -8,7 +8,7 @@ const Titlebar = () => {
       </div>
 
       <div className="slogan">
-        <h5>For all your playlist needs</h5>
+        <h3>For all your playlist needs</h3>
       </div>
     </div>
   );
